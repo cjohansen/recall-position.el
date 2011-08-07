@@ -40,6 +40,8 @@
   "Saved buffer position. Used by remember-buffer-pos and
 recall-buffer-pos.")
 
+(make-local-variable 'remembered-buffer-pos)
+
 (defun remember-buffer-pos ()
   "Remembers the current buffer position and window scroll for
 later retrieval by recall-buffer-pos."
