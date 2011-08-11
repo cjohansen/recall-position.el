@@ -59,9 +59,12 @@ remember-buffer-pos"
   "Cycle Remember or recall buffer position."
   (interactive)
   (if (not remembered-buffer-pos)
-      (remember-buffer-pos)
+      (progn
+        (remember-buffer-pos)
+        (message "Remembered position"))
     (recall-buffer-pos)
-    (setq remembered-buffer-pos nil)))
+    (setq remembered-buffer-pos nil)
+    (message "Restored position")))
 
 (provide 'recall-position)
 ;;; recall-position.el ends here
